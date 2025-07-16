@@ -1,11 +1,34 @@
+<!--
+    position selectors
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./jquery-3.7.1.js"></script>
 </head>
 <body>
-    
+    <ul>
+        <li>Dhoni</li>
+        <li>Rohith Sharma</li>
+        <li>Virat Kohli</li>
+        <li>Nithish</li>
+        <li>Jadeja</li>
+        <li>Gill</li>
+        <li>Bumrah</li>
+    </ul>
+    <script>
+        $().ready(
+            function(){
+                $("ul>li:first").css("color","red");
+                $("ul>li:last").css("color","green");
+                $("ul>li:eq(3)").css("color","blue");
+                $("ul>li:lt(4)").css("font-family","Arial");
+                $("ul>li:gt(4)").css("font-weight","bold");
+            }
+        )
+    </script>
 </body>
 </html>
