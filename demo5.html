@@ -1,0 +1,43 @@
+<!--
+    form element selector
+    [attribte=value] selector
+    event chaining
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+   
+    <label for="txt1">Uid</label>
+    <input type="text" name="" id="txt1" autocomplete="off">
+    <label for="txt2">Name</label>
+    <input type="text" name="" id="txt2" autocomplete="off">
+    <label for="txt3">Place</label>
+    <input type="text" name="" id="txt3" autocomplete="off">
+
+    <script>
+        $().ready(
+            function(){
+                $("*").css({"font-family":"verdana","margin":"10px","padding":"15px"});
+                $("label").css({"display":"block"})
+                $("[type=text]").css("width","50%");
+                $("[type=text]").focus(
+                    function(){
+                        $(this).css("background-color","lightgray");
+                    }
+                ).blur(
+                    function(){
+                         $(this).css("background-color","white");
+                    }
+                )
+            }
+        )
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--
+    element, id and class selectors
+    css(property,value) 
+    css(object)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1>igate solutions</h1>
+    <h2 class="ads1">Near Manasa Theatre</h2>
+    <h2 class="ads1">Pulabazar</h2>
+    <h2>Kavali</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, <span>Harihara Veeramallu</span> adipisicing elit. Numquam, veniam deleniti, iste soluta incidunt aspernatur voluptate magnam ex quisquam distinctio sequi, cupiditate sit optio nesciunt maiores atque assumenda adipisci earum!
+        Accusamus doloremque assumenda quam nesciunt, impedit nostrum dolore aperiam facilis sunt maiores qui nam id officiis, necessitatibus, optio fuga possimus alias voluptatem. Quis, aperiam vel illo iusto nulla natus expedita.
+    </p>
+    <button id="btn1">Click here</button>
+    <script>
+        $().ready(
+            function(){
+                $("#btn1").click(
+                    function(){
+                        $("*").css("font-family","Arial");
+                        $("h1").css("text-align","center");
+                        $(".ads1").css({"color":"red","background-color":"yellow"});
+                    }
+                )
+            }
+        )
+    </script>
+</body>
+</html>

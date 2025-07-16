@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>
+    function hello(){
+        let cid=prompt("Enter the card number","9999-9999-9999-9999")
+        let r=new RegExp("\\d{4}-\\d{4}-\\d{4}-\\d{4}");
+        if(r.test(cid))
+            alert("Valid");
+        else
+            alert("Invalid");
+    }
+    hello();
+</script>
+</body>
+</html>
