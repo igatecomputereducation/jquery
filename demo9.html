@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            box-sizing: border-box;
+            text-align: center;
+            padding: 10%;
+        }
+        [type=button]{
+            width: 200px;
+            height: 50px;
+            font:1.5em Arial;
+        }
+    </style>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="button" value="hello" id="btn1">
+        &nbsp;&nbsp;
+        <input type="button" value="off" id="btn2">
+    </div>
+    <script>
+        $().ready(function(){
+            $("#btn1").on("click",function(){
+                alert("hello world");
+            })
+            $("#btn2").click(function(){
+                $("#btn1").off("click");
+            })
+        })
+    </script>
+</body>
+</html>
