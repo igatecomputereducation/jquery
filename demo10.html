@@ -24,10 +24,13 @@
     </div>
     <script>
         $().ready(function(){
-            $("#btn1").one("click",function(){
+           $("#btn1").on({"click":function(){
                 alert("hello world");
-            })
-            
+           },"mouseenter":function(){
+                $(this).css("background-color","yellow")
+           },"mouseleave":function(){
+                $(this).css("background-color","white")
+           }})
         })
     </script>
 </body>

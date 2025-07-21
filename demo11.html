@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            text-align: center;
+            padding: 10% 20%;
+        }
+        #btn1{
+            display:block ;
+            margin: 0px auto;
+            padding:5px 30px;
+        }
+    </style>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div id="box">
+        <p style="padding:20px;background-color: pink;">igate solutions</p>
+    </div>
+    <button id="btn1">Click</button>
+    <script>
+        var x=1;
+        $("#btn1").click(function(){
+            let p=$("<p></p>");
+            p.text("paragraph "+x);
+            p.css({"padding":"20px","background-color":"pink"})
+            $("#box").append(p);
+            x=x+1;
+        })
+        /*
+        $("p").mouseover(function(){
+            $(this).css("background-color","yellow")
+        }).mouseleave(function(){
+            $(this).css("background-color","pink")
+        })
+        */
+
+        $("#box").on("mouseenter","p",function(){
+            $(this).css("background-color","yellow")
+        }).on("mouseleave","p",function(){
+            $(this).css("background-color","pink")
+        })
+
+    </script>
+</body>
+</html>
