@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #box{
+            position:fixed;
+            width: 100px;
+            background-color: blueviolet;
+            top: 0px;
+            left: -65px;
+            height: 100%;
+            box-shadow: 0px 5px 5px 5px gray;
+        }
+        #btn1{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" value=">" id="btn1">
+    </div>
+    <p style="margin: 20px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem sint voluptates aperiam illum tempore libero cum in obcaecati soluta excepturi eos provident modi, voluptatibus eius dolor cumque natus possimus?
+        Et repellat saepe blanditiis magni quisquam at iste temporibus repudiandae beatae vel deserunt unde nemo ut quo dicta, veritatis natus exercitationem iusto, labore cum! Autem quos reiciendis dignissimos quibusdam necessitatibus!
+        Pariatur commodi debitis laborum iste. Pariatur omnis culpa, quisquam quo sunt optio repudiandae repellendus ab porro numquam aliquid dolor eveniet, nesciunt laboriosam alias sapiente provident vero. Autem error maxime cumque?
+        Harum ea sunt, pariatur ipsam sit tenetur? Veniam molestias, excepturi itaque exercitationem reprehenderit inventore necessitatibus deserunt tempora est dolor quibusdam vel veritatis quod laborum doloribus doloremque nisi eaque distinctio suscipit.
+        Minus esse quibusdam ut! Enim accusantium dolor optio sunt voluptas placeat a adipisci harum nisi dolorem nulla, asperiores architecto illo omnis, veritatis esse veniam quidem libero nesciunt excepturi impedit deserunt?
+        Autem esse saepe excepturi consequatur minima aut vel dolor similique nisi vero alias veniam eius repellendus, ad quasi dolore error nobis perferendis quaerat ducimus iure ullam quidem! Tenetur, eaque quis?
+        Quia cumque cum itaque eum ea facilis, distinctio numquam rerum consequuntur commodi iusto vero nihil porro magnam assumenda? Incidunt saepe modi eveniet excepturi ratione cumque adipisci facilis ex blanditiis nam.
+        Sapiente, saepe? Ea ad dicta illum dolor. Assumenda quos suscipit vel, quod odit in inventore fugit omnis dolor quasi perspiciatis soluta quam recusandae exercitationem earum illum error laborum non facilis.
+        Culpa cumque maxime, aut odio eos iste sunt ex explicabo quo! Optio sequi magni culpa nam deserunt enim obcaecati libero vel sed velit! Ullam et odit pariatur officiis? Numquam, deserunt?
+        Facilis asperiores labore id, assumenda, accusamus nisi quos minus quaerat veniam natus nesciunt quisquam voluptatum quidem quas illum nihil quo eos recusandae vel laborum harum libero ipsa necessitatibus. Modi, qui.
+    </p>
+    <p style="margin: 20px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem sint voluptates aperiam illum tempore libero cum in obcaecati soluta excepturi eos provident modi, voluptatibus eius dolor cumque natus possimus?
+        Et repellat saepe blanditiis magni quisquam at iste temporibus repudiandae beatae vel deserunt unde nemo ut quo dicta, veritatis natus exercitationem iusto, labore cum! Autem quos reiciendis dignissimos quibusdam necessitatibus!
+        Pariatur commodi debitis laborum iste. Pariatur omnis culpa, quisquam quo sunt optio repudiandae repellendus ab porro numquam aliquid dolor eveniet, nesciunt laboriosam alias sapiente provident vero. Autem error maxime cumque?
+        Harum ea sunt, pariatur ipsam sit tenetur? Veniam molestias, excepturi itaque exercitationem reprehenderit inventore necessitatibus deserunt tempora est dolor quibusdam vel veritatis quod laborum doloribus doloremque nisi eaque distinctio suscipit.
+        Minus esse quibusdam ut! Enim accusantium dolor optio sunt voluptas placeat a adipisci harum nisi dolorem nulla, asperiores architecto illo omnis, veritatis esse veniam quidem libero nesciunt excepturi impedit deserunt?
+        Autem esse saepe excepturi consequatur minima aut vel dolor similique nisi vero alias veniam eius repellendus, ad quasi dolore error nobis perferendis quaerat ducimus iure ullam quidem! Tenetur, eaque quis?
+        Quia cumque cum itaque eum ea facilis, distinctio numquam rerum consequuntur commodi iusto vero nihil porro magnam assumenda? Incidunt saepe modi eveniet excepturi ratione cumque adipisci facilis ex blanditiis nam.
+        Sapiente, saepe? Ea ad dicta illum dolor. Assumenda quos suscipit vel, quod odit in inventore fugit omnis dolor quasi perspiciatis soluta quam recusandae exercitationem earum illum error laborum non facilis.
+        Culpa cumque maxime, aut odio eos iste sunt ex explicabo quo! Optio sequi magni culpa nam deserunt enim obcaecati libero vel sed velit! Ullam et odit pariatur officiis? Numquam, deserunt?
+        Facilis asperiores labore id, assumenda, accusamus nisi quos minus quaerat veniam natus nesciunt quisquam voluptatum quidem quas illum nihil quo eos recusandae vel laborum harum libero ipsa necessitatibus. Modi, qui.
+    </p>
+    <script>
+        $().ready(function(){
+            let flag=true;
+            $("#btn1").click(function(){
+                if(flag)
+                {
+                    $("#box").animate({left:"0px"},500);
+                    $("#btn1").val("<");
+                    flag=false;
+                }
+                else
+                {
+                   $("#box").animate({left:"-65px"},500);
+                   $("#btn1").val(">");
+                   flag=true; 
+                }
+            })
+        })
+    </script>
+</body>
+</html>

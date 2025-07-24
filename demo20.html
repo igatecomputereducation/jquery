@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 50%;
+            margin: 20px auto;
+            padding: 50px;
+        }
+        .container p{
+            text-align: justify;
+        }
+    </style>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p id="p1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae porro ea tempora pariatur dolorum blanditiis? Eius iure, voluptas optio sapiente ullam eum, alias corrupti ea laborum delectus deleniti maiores beatae.
+            Incidunt libero nisi nesciunt sapiente accusamus repudiandae saepe a placeat sit repellat officiis quisquam corporis laboriosam rem, pariatur iusto voluptatem totam voluptates et, eveniet sequi! Illum iusto dicta explicabo laborum.
+            Quod at asperiores ipsa veniam nam maiores, voluptatem architecto exercitationem hic illum corrupti quidem, facilis nostrum laudantium ea voluptatibus quo nemo qui ab, accusantium magnam rem! Necessitatibus, consequatur quod. Molestiae.
+        </p>
+        <br><br>
+        <button id="btn1">Hide/Show</button>
+    </div>
+
+    <script>
+        $().ready(function(){
+            $("#btn1").click(function(){
+                //combination of show() and hide()
+                //$("#p1").toggle(500); 
+                //combination of fadeIn() and fadeOut()
+                //$("#p1").fadeToggle(500);
+                $("#p1").fadeTo(500,0.5);
+            })
+        })
+    </script>
+</body>
+</html>

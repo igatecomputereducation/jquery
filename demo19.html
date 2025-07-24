@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 50%;
+            margin: 20px auto;
+            padding: 50px;
+        }
+        .container p{
+            text-align: justify;
+        }
+    </style>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button id="btn1">Hide</button>
+        <br><br>
+        <p id="p1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae porro ea tempora pariatur dolorum blanditiis? Eius iure, voluptas optio sapiente ullam eum, alias corrupti ea laborum delectus deleniti maiores beatae.
+            Incidunt libero nisi nesciunt sapiente accusamus repudiandae saepe a placeat sit repellat officiis quisquam corporis laboriosam rem, pariatur iusto voluptatem totam voluptates et, eveniet sequi! Illum iusto dicta explicabo laborum.
+            Quod at asperiores ipsa veniam nam maiores, voluptatem architecto exercitationem hic illum corrupti quidem, facilis nostrum laudantium ea voluptatibus quo nemo qui ab, accusantium magnam rem! Necessitatibus, consequatur quod. Molestiae.
+        </p>
+    </div>
+
+    <script>
+        $().ready(function(){
+            let flag=true;
+            $("#btn1").click(function(){
+                /*
+                if(flag)
+                {
+                    $("#p1").slideUp(500,"swing");
+                    $("#btn1").text("show");
+                    flag=false;
+                }
+                else
+                {
+                   $("#p1").slideDown(500,"swing");
+                   $("#btn1").text("hide");
+                   flag=true; 
+                }
+                */
+               $("#p1").slideToggle();
+               if($("#btn1").text()==="Hide")
+                    $("#btn1").text("Show");
+               else
+                    $("#btn1").text("Hide");
+            })
+        })
+    </script>
+</body>
+</html>

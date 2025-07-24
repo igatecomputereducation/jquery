@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cell{
+            padding: 10px;
+        }
+    </style>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    <table id="mytable" cellpadding="8" border="1" align="center"> 
+        <tr id="row1" class="row"> 
+            <td id="r1c1" class="cell">Row1 Cell1</td> 
+            <td id="r1c2" class="cell">Row1 Cell2</td> 
+            <td id="r1c3" class="cell">Row1 Cell3</td> 
+            <td id="r1c4" class="cell">Row1 Cell4</td> 
+        </tr> 
+        <tr id="row2" class="row"> 
+            <td id="r2c1" class="cell">Row2 Cell1</td> 
+            <td id="r2c2" class="cell">Row2 Cell2</td> 
+            <td id="r2c3" class="cell">Row2 Cell3</td> 
+            <td id="r2c4" class="cell">Row2 Cell4</td> 
+        </tr> 
+        <tr id="row3" class="row"> 
+            <td id="r3c1" class="cell">Row3 Cell1</td> 
+            <td id="r3c2" class="cell">Row3 Cell2</td> 
+            <td id="r3c3" class="cell">Row3 Cell3</td> 
+            <td id="r3c4" class="cell">Row3 Cell4</td> 
+        </tr> 
+        <tr id="row4" class="row"> 
+            <td id="r4c1" class="cell">Row4 Cell1</td> 
+            <td id="r4c2" class="cell">Row4 Cell2</td> 
+            <td id="r4c3" class="cell">Row4 Cell3</td> 
+            <td id="r4c4" class="cell">Row4 Cell4</td> 
+        </tr> 
+    </table>
+    <div style="text-align: center;padding: 30px;">
+        <button id="btn1">Click</button>
+    </div>
+    <script>
+        $().ready(function(){
+            $("#btn1").click(function(){
+                //$("#r2c2").parent().css("outline","5px solid red");
+                //$("#r2c2").parents().css("outline","5px solid red");
+                //$("#r2c2").parentsUntil("table").css("outline","5px solid red");
+                //$("#r2c3").siblings().css("outline","5px solid red");
+                //$("#r2c3").prev().css("outline","5px solid red");
+                //$("#r2c3").prevAll().css("outline","5px solid red");
+                //$("#r2c3").prevUntil("#r2c1").css("outline","5px solid red");
+                //$("#r2c3").next().css("outline","5px solid red");
+                $("#row2").children().css("outline","5px solid red");
+            })
+        })
+    </script>
+</body>
+</html>

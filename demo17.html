@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <ol id="lst">
+        <li>Kalki</li>
+        <li id="p">Pushpa</li>
+        <li>Raid2</li>
+        <li>KGF</li>
+    </ol>
+
+    <input type="button" value="Add" id="btn1">
+    <input type="button" value="Remove" id="btn2">
+    <input type="button" value="Empty" id="btn3">
+
+    <script>
+        $().ready(function(){
+            $("#btn1").click(function(){
+                $("#lst").append("<li>Hari Hara Veera Mallu</li>")
+                $("#lst").prepend("<li>Devara</li>");
+                $("#lst").before("<b>Tollywood Bombs</b>");
+                $("#lst").after("<b>Conditions apply</b><br>");
+            })
+            
+            $("#btn2").click(function(){
+                $("#p").remove();
+            })
+
+            $("#btn3").click(function(){
+                $("#lst").empty();
+            })
+
+        })
+    </script>
+</body>
+</html>
